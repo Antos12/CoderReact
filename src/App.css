@@ -20,3 +20,12 @@
   padding-top: 1.3em;
   font-size: 1.55em;
 }
+.carrito{
+  width: 7vw;
+  height: 6vh;
+  padding-top: 0;
+}
+.carrito img{
+  width: 100%;
+  height: 100%;
+}
