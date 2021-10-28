@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import ItemList from './ItemList';
+function ItemListContainer(){
+    return(
+        <div className='contenedorLista'>
+            <ItemList buscar='Crema'/>
 
-function ItemListContainer({greeting}) {
-    return (
-        <div>
-            <h3>{greeting}</h3>
         </div>
     )
 }
 
-export default ItemListContainer
+
+export default ItemListContainer;

@@ -8,8 +8,9 @@ function App() {
   return (
     <div>
     < NavBar />
-    <ItemListContainer greeting = "Hola soy el mensaje "/>
+    <ItemListContainer />
     <ItemCount  stock="10"/>
+    
     </div>
     
   );

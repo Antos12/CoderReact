@@ -44,3 +44,19 @@
 
 }
 
+.contenedorCarrito img{
+  width: 100%;
+  height: 100%;
+}
+.imagenProducto{
+  width: 100px;
+  height: 50px;
+}
+.cartaProducto{
+  width: 20%;
+  height: auto;
+}
+.contenedorLista{
+  display: flex;
+  flex-direction: row;
+}
