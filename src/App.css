@@ -68,3 +68,14 @@
   flex-wrap: nowrap;
   justify-content: space-around;
 }
+
+.imagenDetalle{
+  width: 100%;
+  height: 128px;
+}
+.imagenDetalle img{
+  width: 100%;
+  height: 100%;
+}
+
+
