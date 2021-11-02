@@ -1,8 +1,9 @@
 import React from 'react';
 import { Container,Row,Col } from 'react-bootstrap';
-import perfume from "../assets/img/humor.jpg"
+import perfume from "../assets/img/humor.jpg";
 
-function Item(){
+
+function Item({prod}){
     return(
         <div className='cartaProducto'>
             <Container>
@@ -11,16 +12,17 @@ function Item(){
                 </Row>
                 <Row>
                     <Col xs={6}>Producto: </Col>
-                    <Col xs={6}>Perfume</Col>
+                    <Col xs={6}>{prod.producto}</Col>
                 </Row>
                 <Row>
-                    <Col xs={6}>Nombre</Col>
-                    <Col xs={6}>Humor primeriro Femenino</Col>
+                    <Col xs={6}>Tipo: </Col>
+                    <Col xs={6}>{prod.tipo}</Col>
                 </Row>
                 <Row>
                     <Col xs={6}>Precio</Col>
-                    <Col xs={6}>$3005</Col>
+                    <Col xs={6}>{prod.precio}</Col>
                 </Row>
+
             </Container>
         </div>
     )

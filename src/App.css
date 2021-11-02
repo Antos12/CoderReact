@@ -53,10 +53,18 @@
   height: 50px;
 }
 .cartaProducto{
-  width: 20%;
+  display: block;
+  width: auto;
   height: auto;
 }
 .contenedorLista{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contenedor-general-productos{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
