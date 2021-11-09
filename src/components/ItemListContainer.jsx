@@ -1,33 +1,45 @@
 import {useState,useEffect} from 'react';
-import ItemCount from './ItemCount';
+
 import ItemList from './ItemList';
 import {getProducts} from './GetProducts'
+import {useParams} from 'react-router'
+import {Link} from 'react-router-dom'
+
+
 
 
 function ItemListContainer(){
-    const [productos, setProductos]=useState ([])
-    useEffect (()=>{
-        getProducts
-        .then((products)=>{
-            setProductos(products)
-        })
-    },[])
+    const[productos,setProductos]=useState([])
+    const {categoriaId}=useParams()
+    useEffect(()=>{
+        if (categoriaId){
+            getProducts
+            .then ((res)=>{
+                setProductos(res.filter(prod=>prod.categoria===categoriaId))
+            })
+        } else{
+            getProducts
+            .then((res)=>{
+                setProductos(res)
+            })
+        }
+    },[categoriaId])
+    if(productos===null)
+    return <h1>Loading</h1>
+    else
     return(
-        
-        <div className='contenedorLista'>
-            <div className='contenedor-Producto'>
-                <ItemList products={productos} />
-
-            </div>
-            <div className='contendor-Contador'>
-                 <ItemCount initial={1} stock="10"/>
-            </div>
-            
-            
-            
-
+        <div>
+            <Link to={`/Anime`}>
+                <button variant='primary'>Ver Anime</button>
+            </Link>
+            <Link to={'/comic'}>
+                <button variant='primary'>Ver Comic</button>
+            </Link>
+            <ItemList products={productos}/>
         </div>
     )
+
+   
 }
 
 

@@ -1,28 +1,20 @@
 import { useState,useEffect } from "react";
+import { useParams } from "react-router";
+import { getProducts } from "./GetProducts";
 import ItemDetail from "./ItemDetail";
 
 function ItemDetailContainer(){
     const [item, setItem]=useState()
-    const getItem= new Promise((resolve,reject)=>{
-        const ItemDetail={
-            "id": "1",
-            "producto":"figuras haikyuu",
-            "tipo": "Anime",
-            "precio": "$1390",
-            "descripcion":"Figuras de plascico de 10 cm, se venden por separado ",
-            "imagenUrl": ""
-        }
-        setTimeout(()=>{
-            resolve(ItemDetail)
-        },2000)
-        })
-        useEffect(() => {
-            getItem
-            .then((ItemDetail)=>setItem(ItemDetail))
-        }, [])
+       const {itemId}=useParams()
+       useEffect(()=>{
+           getProducts
+           .then(res=>{
+               setItem(res.find(prod=>prod.id===itemId))})
+       },[itemId])
+         
         return(
             <div>
-                <ItemDetail item={item}/>
+               <ItemDetail item={item}/>
             </div>
         )
     }

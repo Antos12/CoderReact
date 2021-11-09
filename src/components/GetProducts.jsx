@@ -3,72 +3,82 @@ const productos =[
     {
         "id": "1",
         "producto":"figuras haikyuu",
-        "tipo": "Anime",
+        "categoria": "Anime",
         "precio": "$1390",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion": "insert description"
     },
     {
         "id": "2",
         "producto":"peluches deku ",
-        "tipo": "Anime",
+        "categoria": "Anime",
         "precio": "$2100",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion": "insert description"
     },
     {
         "id": "3",
         "producto":"Llavero MJOLNIR",
-        "tipo": "comic",
+        "categoria": "comic",
         "precio": "$600",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion": "insert description"
     },
     {
         "id": "4",
         "producto":"Funko POP SHANG CHI",
-        "tipo":"comic",
+        "categoria":"comic",
         "precio":"$3750",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion": "insert description"
     },
     {
         "id": "5",
         "producto":"Manga Shuumatsu no Valkyrie",
-        "tipo": "Manga",
+        "categoria": "Manga",
         "precio":"550",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion": "insert description"
     },
     {
         "id": "6",
         "producto":"Vaso termico Itachi",
-        "tipo": "Anime",
+        "categoria": "Anime",
         "precio": "$750",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion": "insert description"
     },
     {
         "id": "7",
         "producto":"Mascara Kakashi",
-        "tipo": "Anime",
+        "categoria": "Anime",
         "precio": "$1200",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion": "insert description"
     },
     {
         "id": "8",
         "producto":"juego de mesa juguemos + cerca invierno",
-        "tipo": "Juego",
+        "categoria": "Juego",
         "precio": "$1000",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion": "insert description"
     },
     {
         "id": "9",
         "producto":"Billetera Harry Potter",
-        "tipo": "Pelicula",
+        "categoria": "Pelicula",
         "precio": "$980",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion": "insert description"
     },
     {
         "id": "10",
         "producto":"Tazon Jujutsu Kaisen",
-        "tipo": "Anime",
+        "categoria": "Anime",
         "precio": "$1300",
-        "imagenUrl": ""
+        "imagenUrl": "",
+        "descripcion": "insert description"
     }
     
 ]
