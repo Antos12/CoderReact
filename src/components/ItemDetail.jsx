@@ -1,16 +1,28 @@
-import React from 'react'
+import {useState} from 'react'
 import haikyuu from "../assets/img/haikyu.jpg";
 import ItemCount from './ItemCount';
 import { Spinner,Card} from 'react-bootstrap'
+
 function ItemDetail({ item }) {
+    const [cantidadPorComprar, setCantidadPorComprar]=useState();
+    const [estado, setEstado]=useState(false);
+
+
     
-    const agregarCarrito =(contador)=>{
+    
+    const agregarCarrito =(contador,estado)=>{
+        setCantidadPorComprar(contador)
+        setEstado(estado)
+        
         if(contador>0)
 
         
         alert(`Ha agregado: ${contador} productos`);
+
+        
         else
         alert('No hay productos agregados')
+        
     
 
     }
@@ -22,7 +34,8 @@ function ItemDetail({ item }) {
         </div>)
 
     }
-    else
+    else 
+        
 
         return (
           <div>
@@ -38,7 +51,7 @@ function ItemDetail({ item }) {
                          {item.precio}
                     </Card.Text>
                    <div>
-                       <ItemCount initial={1} stock='5' onAdd={agregarCarrito}/>
+                       <ItemCount initial={1} stock='5' onAdd={agregarCarrito} estado={estado}/>
                    </div>
               </Card.Body>
             </Card>
@@ -46,6 +59,7 @@ function ItemDetail({ item }) {
         </div>
         
         )
+       
 }
 
 export default ItemDetail

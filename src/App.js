@@ -8,6 +8,7 @@ import ItemDetailContainer from './components/ItemDetailContainer'
 
 import Galeria from './components/Galeria'
 import Nosotros from './components/Nosotros'
+import Cart from './components/Cart'
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
             <Route exact path='/Contacto' element={<Contacto />} />
             <Route exact path='/Galeria' element={<Galeria />} />
             <Route exact path='/Nosotros' element={<Nosotros />} />
-            <Route exact path='/Cart' element={<Nosotros />} />
+            <Route exact path='/Cart' element={<Cart />} />
             <Route  exact path='/:categoriaId' element={<ItemListContainer/>} />
             <Route exact path='/ItemDetailContainer/:itemId' element={<ItemDetailContainer/>}/>
 

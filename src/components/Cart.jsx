@@ -3,7 +3,7 @@ import React from "react";
 const Cart=()=>{
     return(
         <div>
-            Seccion de Contacto
+            Se redirecciono al carrito
         </div>
     )
 }

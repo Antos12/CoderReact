@@ -2,13 +2,16 @@
 import React, {useState} from "react";
 import { Alert } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
 
 
 
 
 function ItemCount (props){
     const [contador, setContador]= useState (props.initial);
-
+    let estado=props.estado;
+    
+    
     
    
     function agregar (){
@@ -22,8 +25,7 @@ function ItemCount (props){
         setContador (contador-1);
         
     }
-
-        
+  if(estado===false)
     return(
         <div className='contador'>
             <div className='contador-botones'>
@@ -38,10 +40,22 @@ function ItemCount (props){
 
 
             </div>
-            <button  onClick={()=>{props.onAdd(contador)}} className='btn btn-primary'> Agregar al carrito</button>
+            <button  onClick={()=>{
+                estado=true
+                props.onAdd(contador, estado) 
+             
+            }} className='btn btn-primary'> Agregar al carrito</button>
         </div>
         
         )
+        else{
+            return(
+                <Link to='/Cart'>
+                <Button>Finalizar compra</Button>
+                </Link>
+            )
+            
+        }
 }
 
 
