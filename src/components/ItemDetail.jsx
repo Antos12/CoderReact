@@ -1,31 +1,46 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import haikyuu from "../assets/img/haikyu.jpg";
+import { useCartContext } from './context/CartContext';
 import ItemCount from './ItemCount';
 import { Spinner,Card} from 'react-bootstrap'
 
 function ItemDetail({ item }) {
     const [cantidadPorComprar, setCantidadPorComprar]=useState();
     const [estado, setEstado]=useState(false);
-
-
-    
+    const {cartList, addToCart,isInCart}=useCartContext()
+    useEffect(()=>{
+        return
+    } ,[cantidadPorComprar])
+     
     
     const agregarCarrito =(contador,estado)=>{
-        setCantidadPorComprar(contador)
+        
+        
+        if(contador>0){
+            setCantidadPorComprar(contador)
         setEstado(estado)
-        
-        if(contador>0)
-
-        
-        alert(`Ha agregado: ${contador} productos`);
-
-        
+        const prodToAdd={
+            "id":item.id,
+            "producto":item.producto,
+            "precio":item.precio,
+            "cantidad":contador
+        }
+         if(isInCart(prodToAdd.id)===false){
+             console.log('se puede agregar')
+             addToCart(prodToAdd)
+         }
+         else
+         console.log('no se puede agregar')
+         
+        }
         else
-        alert('No hay productos agregados')
-        
-    
-
+        alert('no hay nada que agregar')
     }
+        
+       
+
+        
+       
     if (item == null) {
         return (<div>
             <Spinner animation="border" role="status">

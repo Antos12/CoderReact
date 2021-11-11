@@ -24,9 +24,7 @@ function Item({prod}){
                     <Link to={`/ItemDetailContainer/${prod.id}`}>
                         <Button variant='secondary'>Mas informacion</Button>
                     </Link>
-                    <Button className="Comprar">
-                       <Card.Link href="#">Comprar</Card.Link>
-                    </Button>
+                   
                   
                   
                 </Card.Footer>
