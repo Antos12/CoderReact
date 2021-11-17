@@ -1,6 +1,6 @@
 
 import React, {useState} from "react";
-import { Alert } from "react-bootstrap";
+import { Alert, ButtonToolbar } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
 
@@ -45,6 +45,10 @@ function ItemCount (props){
                 props.onAdd(contador, estado) 
              
             }} className='btn btn-primary'> Agregar al carrito</button>
+            <Link to='/'>
+                <Button>Seguir comprando</Button>
+
+            </Link>
         </div>
         
         )

@@ -3,7 +3,8 @@ import { Nav, Container} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import App from '../App'
 import logo from '../assets/img/logo.jpg'
-import carrito from '../assets/img/carrito.jpg'
+
+import CartWidget from './CartWidget'
 
 const NavBar = () => {
     return (
@@ -18,8 +19,8 @@ const NavBar = () => {
 
                     </div>
                     
-                    <div className="carrito">
-                        <img src={carrito} alt="imagen del carrito" />
+                    <div className="contenedorCarrito">
+                        <CartWidget/>
 
                     </div>
                 </Container>

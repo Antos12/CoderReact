@@ -70,6 +70,7 @@ function ItemDetail({ item }) {
                    </div>
               </Card.Body>
             </Card>
+            
 
         </div>
         

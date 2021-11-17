@@ -21,12 +21,28 @@ const CartContextProvider = ({children}) => {
         else
         return true
     }
+    const removeFromCart = (id)=>{
+        let posicion= cartList.findIndex(prod=> prod.id===id)
+        let newCartList= cartList
+        newCartList.splice(posicion, 1) 
+        setCartList([...newCartList])
+    }
+    const removeAll=()=>{
+        setCartList([])
+    }
+    const cartCount=()=>{
+        let count= cartList.length
+        return count
+    }
     return (
         <CartContext.Provider value={{
             cartList,
             showCartList,
             addToCart,
-            isInCart
+            isInCart,
+            removeFromCart,
+            removeAll,
+            cartCount
         }}>
             {children}
         </CartContext.Provider>

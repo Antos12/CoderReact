@@ -1,23 +1,27 @@
-import React from 'react'
-import { Table } from 'react-bootstrap'
+import {React,useContext} from 'react'
+import {  Button } from 'react-bootstrap'
+import { useCartContext } from './context/CartContext'
 
-const ItemCart = ({ prod }) => {
-    console.log(prod)
+const ItemCart = ({prod})=>{
+    const {removeFromCart}= useCartContext()
+    const calcularSubTotal=(prod)=>{
+        let subTotal= prod.cantidad*prod.precio
+        return subTotal
+    }
+
+
+
     return (
-        <div>
-            <Table striped bordered hover>
-                
-                <tbody>
                     <tr>
                         <td>{prod.id}</td>
                         <td>{prod.producto}</td>
                         <td>{prod.precio}</td>
                         <td>{prod.cantidad}</td>
-                    </tr>
-                   
-                </tbody>
-            </Table>
-        </div>
+                        <td>{calcularSubTotal(prod)}</td>
+                        <td><Button variant="dark" onClick={()=>{
+                            removeFromCart(prod.id)
+                        }}>X</Button></td>
+                    </tr>                   
     )
 }
 
