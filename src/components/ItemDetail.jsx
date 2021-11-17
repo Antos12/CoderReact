@@ -2,7 +2,8 @@ import {useEffect, useState} from 'react'
 import haikyuu from "../assets/img/haikyu.jpg";
 import { useCartContext } from './context/CartContext';
 import ItemCount from './ItemCount';
-import { Spinner,Card} from 'react-bootstrap'
+import { Spinner,Card, Button} from 'react-bootstrap'
+import {Link} from 'react-router-dom'
 
 function ItemDetail({ item }) {
     const [cantidadPorComprar, setCantidadPorComprar]=useState();
@@ -68,8 +69,12 @@ function ItemDetail({ item }) {
                    <div>
                        <ItemCount initial={1} stock='5' onAdd={agregarCarrito} estado={estado}/>
                    </div>
+                   
               </Card.Body>
             </Card>
+            <Link to='/'>
+                <Button>Volver para seguir comprando</Button>
+            </Link>
             
 
         </div>

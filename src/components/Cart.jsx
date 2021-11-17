@@ -12,7 +12,7 @@ const Cart = () => {
         let subTotal=0
         console.log(cartList)
         if(cartList!=null) {
-            cartList.map(prod=> {
+            cartList.map(prod => {
                 precio= prod.cantidad*prod.precio
                 subTotal= subTotal+precio
             })

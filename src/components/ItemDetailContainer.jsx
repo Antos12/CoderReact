@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { getProducts } from "./GetProducts";
 import ItemDetail from "./ItemDetail";
 
+
 function ItemDetailContainer(){
     const [item, setItem]=useState()
        const {itemId}=useParams()
@@ -15,6 +16,7 @@ function ItemDetailContainer(){
         return(
             <div>
                <ItemDetail item={item}/>
+               
             </div>
         )
     }

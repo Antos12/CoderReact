@@ -45,10 +45,7 @@ function ItemCount (props){
                 props.onAdd(contador, estado) 
              
             }} className='btn btn-primary'> Agregar al carrito</button>
-            <Link to='/'>
-                <Button>Seguir comprando</Button>
-
-            </Link>
+       
         </div>
         
         )
