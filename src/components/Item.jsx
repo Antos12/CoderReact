@@ -11,13 +11,13 @@ function Item({prod}){
           <Card style={{ width: '18rem' }}>
                <Card.Img variant="center" src={haikyuu}  className="imagen-carta" />
                 <Card.Body className="card-Body">
-                   <Card.Title>{prod.producto}</Card.Title>
+                   <Card.Title>{prod.name}</Card.Title>
                     <Card.Text>
-                        Precio: {prod.precio}
+                        Precio: {prod.price}
                    </Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush card-Agregado">
-                   <ListGroupItem>tipo: {prod.categoria}</ListGroupItem>
+                   <ListGroupItem>tipo: {prod.category}</ListGroupItem>
     
                 </ListGroup>
                 <Card.Footer className="card-Footer">

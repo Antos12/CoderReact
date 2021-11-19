@@ -22,8 +22,8 @@ function ItemDetail({ item }) {
         setEstado(estado)
         const prodToAdd={
             "id":item.id,
-            "producto":item.producto,
-            "precio":item.precio,
+            "name":item.name,
+            "price":item.price,
             "cantidad":contador
         }
          if(isInCart(prodToAdd.id)===false){
@@ -58,13 +58,13 @@ function ItemDetail({ item }) {
             <Card style={{ width: '18rem' }}>
                <Card.Img variant="top" src={haikyuu}  className="card-Detalle"/>
                <Card.Body>
-                    <Card.Title>{item.producto}</Card.Title>
+                    <Card.Title>{item.name}</Card.Title>
                     <Card.Text>
-                         {item.descripcion}
+                         {item.description}
                     </Card.Text>
                     <Card.Text>
-                         {item.tipo}
-                         {item.precio}
+                         {item.category}
+                         {item.price}
                     </Card.Text>
                    <div>
                        <ItemCount initial={1} stock='5' onAdd={agregarCarrito} estado={estado}/>

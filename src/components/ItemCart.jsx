@@ -14,8 +14,8 @@ const ItemCart = ({prod})=>{
     return (
                     <tr>
                         <td>{prod.id}</td>
-                        <td>{prod.producto}</td>
-                        <td>{prod.precio}</td>
+                        <td>{prod.name}</td>
+                        <td>{prod.price}</td>
                         <td>{prod.cantidad}</td>
                         <td>{calcularSubTotal(prod)}</td>
                         <td><Button variant="dark" onClick={()=>{
