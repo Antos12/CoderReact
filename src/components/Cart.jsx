@@ -118,10 +118,10 @@ const Cart = () => {
                             <Button>Volver para seguir comprando</Button>
                         </Link>
                         <Form onSubmit={validar} onChange={handlerChange}>
-                            <input type="text" name='nombre' placeholder='nombre' value={formData.nombre} />
-                            <input type="text" name='telefono' placeholder='telefono' value={formData.telefono} />
-                            <input type="email" name='email' placeholder='email' value={formData.email} />
-                            <input type="email" name='repetirEmail' placeholder='repita su email' value={formData.repetirEmail} />
+                            <input type="text" name='nombre' placeholder='nombre' value={formData.nombre} defaultValue='' />
+                            <input type="text" name='telefono' placeholder='telefono' value={formData.telefono} defaultValue='' />
+                            <input type="email" name='email' placeholder='email' value={formData.email} defaultValue='' />
+                            <input type="email" name='repetirEmail' placeholder='repita su email' value={formData.repetirEmail} defaultValue='' />
                             <button>Enviar</button>
 
                         </Form>
