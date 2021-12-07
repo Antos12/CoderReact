@@ -4,7 +4,7 @@ Proyecto realizado con React y boostrap durante el trnascurso del curso de React
 Comenzando 🚀
 en su editor de codigo primero debera clonar el repo en al terminal con el comando 
 
-git clone 
+git clone https://github.com/Antos12/Frikimania-Ecommerce.git
 
 y luego hacer
 
