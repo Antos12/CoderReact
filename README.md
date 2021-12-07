@@ -11,6 +11,7 @@ y luego hacer
 npm start
 
 Mira Deployment para conocer como desplegar el proyecto.
+https://lucid-noyce-80651a.netlify.app
 
 Pre-requisitos 📋
 las depencias de react-router-dom 5.3.0
