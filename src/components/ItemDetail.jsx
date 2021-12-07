@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react'
-import haikyuu from "../assets/img/haikyu.jpg";
 import { useCartContext } from './context/CartContext';
 import ItemCount from './ItemCount';
 import { Spinner,Card, Button} from 'react-bootstrap'
@@ -8,7 +7,7 @@ import {Link} from 'react-router-dom'
 function ItemDetail({ item }) {
     const [cantidadPorComprar, setCantidadPorComprar]=useState();
     const [estado, setEstado]=useState(false);
-    const {cartList, addToCart,isInCart}=useCartContext()
+    const { addToCart,isInCart}=useCartContext()
     useEffect(()=>{
         return
     } ,[cantidadPorComprar])
@@ -27,12 +26,8 @@ function ItemDetail({ item }) {
             "cantidad":contador
         }
          if(isInCart(prodToAdd.id)===false){
-             console.log('se puede agregar')
              addToCart(prodToAdd)
-         }
-         else
-         console.log('no se puede agregar')
-         
+         }         
         }
         else
         alert('no hay nada que agregar')
@@ -56,7 +51,7 @@ function ItemDetail({ item }) {
         return (
           <div>
             <Card style={{ width: '18rem' }}>
-               <Card.Img variant="top" src={haikyuu}  className="card-Detalle"/>
+               <Card.Img variant="top" src={item.imgUrl}  className="card-Detalle"/>
                <Card.Body>
                     <Card.Title>{item.name}</Card.Title>
                     <Card.Text>

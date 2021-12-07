@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 
 import ItemList from './ItemList';
-import { getProducts } from './GetProducts'
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 import {getFirestore} from '../service/getFirestore'
@@ -11,7 +10,6 @@ import {getFirestore} from '../service/getFirestore'
 
 function ItemListContainer() {
   const [productos, setProductos]=useState([])
-  const [producto, setProducto]=useState({})
   const { categoriaId } = useParams()
   useEffect(()=>{
       const db=getFirestore()
@@ -26,22 +24,6 @@ function ItemListContainer() {
 
      
     }, [categoriaId])
-    console.log(productos);
-       
-    
-   
-        /* if (categoriaId){
-            getProducts
-            .then ((res)=>{
-                setProductos(res.filter(prod=>prod.categoria===categoriaId))
-            })
-        } else{
-            getProducts
-            .then((res)=>{
-                setProductos(res)
-            })
-        } */
-  
 
     if (productos === null)
         return <h1>Loading</h1>

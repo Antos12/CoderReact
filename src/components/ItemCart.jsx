@@ -1,11 +1,10 @@
-import {React,useContext} from 'react'
 import {  Button } from 'react-bootstrap'
 import { useCartContext } from './context/CartContext'
 
 const ItemCart = ({prod})=>{
     const {removeFromCart}= useCartContext()
     const calcularSubTotal=(prod)=>{
-        let subTotal= prod.cantidad*prod.precio
+        let subTotal= prod.price*prod.cantidad
         return subTotal
     }
 

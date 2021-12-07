@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 
-import haikyuu from "../assets/img/haikyu.jpg";
 import { Card,ListGroup,ListGroupItem,Button } from 'react-bootstrap';
 
 
@@ -9,7 +8,7 @@ function Item({prod}){
     return(
       <div className='cartaProducto'>
           <Card style={{ width: '18rem' }}>
-               <Card.Img variant="center" src={haikyuu}  className="imagen-carta" />
+               <Card.Img variant="center" src={prod.imgUrl}  className="imagen-carta" />
                 <Card.Body className="card-Body">
                    <Card.Title>{prod.name}</Card.Title>
                     <Card.Text>
